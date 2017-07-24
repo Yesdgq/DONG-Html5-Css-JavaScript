@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DONGHtmlVC.h"
 
 @interface ViewController ()
 
@@ -16,14 +17,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
+- (IBAction)buttonClick:(id)sender
+{
+    DONGHtmlVC *htmlVC = [[DONGHtmlVC alloc] init];
+    htmlVC.urlString = @"https://www.baidu.com";
+    [self.navigationController pushViewController:htmlVC animated:YES];
+}
 
 @end
