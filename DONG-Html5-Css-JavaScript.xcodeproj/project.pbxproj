@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		117EA63A1F25DBD200FF6EEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 117EA6391F25DBD200FF6EEA /* main.m */; };
+		117EA63D1F25DBD200FF6EEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 117EA63C1F25DBD200FF6EEA /* AppDelegate.m */; };
+		117EA6401F25DBD200FF6EEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 117EA63F1F25DBD200FF6EEA /* ViewController.m */; };
+		117EA6431F25DBD200FF6EEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117EA6411F25DBD200FF6EEA /* Main.storyboard */; };
+		117EA6451F25DBD200FF6EEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117EA6441F25DBD200FF6EEA /* Assets.xcassets */; };
+		117EA6481F25DBD200FF6EEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117EA6461F25DBD200FF6EEA /* LaunchScreen.storyboard */; };
+		117EA6531F25DBD200FF6EEA /* DONG_Html5_Css_JavaScriptTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 117EA6521F25DBD200FF6EEA /* DONG_Html5_Css_JavaScriptTests.m */; };
+		117EA65E1F25DBD200FF6EEA /* DONG_Html5_Css_JavaScriptUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 117EA65D1F25DBD200FF6EEA /* DONG_Html5_Css_JavaScriptUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		117EA64F1F25DBD200FF6EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 117EA62D1F25DBD200FF6EEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 117EA6341F25DBD200FF6EEA;
+			remoteInfo = "DONG-Html5-Css-JavaScript";
+		};
+		117EA65A1F25DBD200FF6EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 117EA62D1F25DBD200FF6EEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 117EA6341F25DBD200FF6EEA;
+			remoteInfo = "DONG-Html5-Css-JavaScript";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		117EA6351F25DBD200FF6EEA /* DONG-Html5-Css-JavaScript.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DONG-Html5-Css-JavaScript.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		117EA6391F25DBD200FF6EEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		117EA63B1F25DBD200FF6EEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		117EA63C1F25DBD200FF6EEA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		117EA63E1F25DBD200FF6EEA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		117EA63F1F25DBD200FF6EEA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		117EA6421F25DBD200FF6EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		117EA6441F25DBD200FF6EEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		117EA6471F25DBD200FF6EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		117EA6491F25DBD200FF6EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		117EA64E1F25DBD200FF6EEA /* DONG-Html5-Css-JavaScriptTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DONG-Html5-Css-JavaScriptTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		117EA6521F25DBD200FF6EEA /* DONG_Html5_Css_JavaScriptTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DONG_Html5_Css_JavaScriptTests.m; sourceTree = "<group>"; };
+		117EA6541F25DBD200FF6EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		117EA6591F25DBD200FF6EEA /* DONG-Html5-Css-JavaScriptUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DONG-Html5-Css-JavaScriptUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		117EA65D1F25DBD200FF6EEA /* DONG_Html5_Css_JavaScriptUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DONG_Html5_Css_JavaScriptUITests.m; sourceTree = "<group>"; };
+		117EA65F1F25DBD200FF6EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		117EA6321F25DBD200FF6EEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117EA64B1F25DBD200FF6EEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117EA6561F25DBD200FF6EEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		117EA62C1F25DBD200FF6EEA = {
+			isa = PBXGroup;
+			children = (
+				117EA6371F25DBD200FF6EEA /* DONG-Html5-Css-JavaScript */,
+				117EA6511F25DBD200FF6EEA /* DONG-Html5-Css-JavaScriptTests */,
+				117EA65C1F25DBD200FF6EEA /* DONG-Html5-Css-JavaScriptUITests */,
+				117EA6361F25DBD200FF6EEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		117EA6361F25DBD200FF6EEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				117EA6351F25DBD200FF6EEA /* DONG-Html5-Css-JavaScript.app */,
+				117EA64E1F25DBD200FF6EEA /* DONG-Html5-Css-JavaScriptTests.xctest */,
+				117EA6591F25DBD200FF6EEA /* DONG-Html5-Css-JavaScriptUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		117EA6371F25DBD200FF6EEA /* DONG-Html5-Css-JavaScript */ = {
+			isa = PBXGroup;
+			children = (
+				117EA63B1F25DBD200FF6EEA /* AppDelegate.h */,
+				117EA63C1F25DBD200FF6EEA /* AppDelegate.m */,
+				117EA63E1F25DBD200FF6EEA /* ViewController.h */,
+				117EA63F1F25DBD200FF6EEA /* ViewController.m */,
+				117EA6411F25DBD200FF6EEA /* Main.storyboard */,
+				117EA6441F25DBD200FF6EEA /* Assets.xcassets */,
+				117EA6461F25DBD200FF6EEA /* LaunchScreen.storyboard */,
+				117EA6491F25DBD200FF6EEA /* Info.plist */,
+				117EA6381F25DBD200FF6EEA /* Supporting Files */,
+			);
+			path = "DONG-Html5-Css-JavaScript";
+			sourceTree = "<group>";
+		};
+		117EA6381F25DBD200FF6EEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				117EA6391F25DBD200FF6EEA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		117EA6511F25DBD200FF6EEA /* DONG-Html5-Css-JavaScriptTests */ = {
+			isa = PBXGroup;
+			children = (
+				117EA6521F25DBD200FF6EEA /* DONG_Html5_Css_JavaScriptTests.m */,
+				117EA6541F25DBD200FF6EEA /* Info.plist */,
+			);
+			path = "DONG-Html5-Css-JavaScriptTests";
+			sourceTree = "<group>";
+		};
+		117EA65C1F25DBD200FF6EEA /* DONG-Html5-Css-JavaScriptUITests */ = {
+			isa = PBXGroup;
+			children = (
+				117EA65D1F25DBD200FF6EEA /* DONG_Html5_Css_JavaScriptUITests.m */,
+				117EA65F1F25DBD200FF6EEA /* Info.plist */,
+			);
+			path = "DONG-Html5-Css-JavaScriptUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		117EA6341F25DBD200FF6EEA /* DONG-Html5-Css-JavaScript */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 117EA6621F25DBD200FF6EEA /* Build configuration list for PBXNativeTarget "DONG-Html5-Css-JavaScript" */;
+			buildPhases = (
+				117EA6311F25DBD200FF6EEA /* Sources */,
+				117EA6321F25DBD200FF6EEA /* Frameworks */,
+				117EA6331F25DBD200FF6EEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DONG-Html5-Css-JavaScript";
+			productName = "DONG-Html5-Css-JavaScript";
+			productReference = 117EA6351F25DBD200FF6EEA /* DONG-Html5-Css-JavaScript.app */;
+			productType = "com.apple.product-type.application";
+		};
+		117EA64D1F25DBD200FF6EEA /* DONG-Html5-Css-JavaScriptTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 117EA6651F25DBD200FF6EEA /* Build configuration list for PBXNativeTarget "DONG-Html5-Css-JavaScriptTests" */;
+			buildPhases = (
+				117EA64A1F25DBD200FF6EEA /* Sources */,
+				117EA64B1F25DBD200FF6EEA /* Frameworks */,
+				117EA64C1F25DBD200FF6EEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				117EA6501F25DBD200FF6EEA /* PBXTargetDependency */,
+			);
+			name = "DONG-Html5-Css-JavaScriptTests";
+			productName = "DONG-Html5-Css-JavaScriptTests";
+			productReference = 117EA64E1F25DBD200FF6EEA /* DONG-Html5-Css-JavaScriptTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		117EA6581F25DBD200FF6EEA /* DONG-Html5-Css-JavaScriptUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 117EA6681F25DBD200FF6EEA /* Build configuration list for PBXNativeTarget "DONG-Html5-Css-JavaScriptUITests" */;
+			buildPhases = (
+				117EA6551F25DBD200FF6EEA /* Sources */,
+				117EA6561F25DBD200FF6EEA /* Frameworks */,
+				117EA6571F25DBD200FF6EEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				117EA65B1F25DBD200FF6EEA /* PBXTargetDependency */,
+			);
+			name = "DONG-Html5-Css-JavaScriptUITests";
+			productName = "DONG-Html5-Css-JavaScriptUITests";
+			productReference = 117EA6591F25DBD200FF6EEA /* DONG-Html5-Css-JavaScriptUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		117EA62D1F25DBD200FF6EEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = yesdgq;
+				TargetAttributes = {
+					117EA6341F25DBD200FF6EEA = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = J5EPCRFAR9;
+						ProvisioningStyle = Automatic;
+					};
+					117EA64D1F25DBD200FF6EEA = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = J5EPCRFAR9;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 117EA6341F25DBD200FF6EEA;
+					};
+					117EA6581F25DBD200FF6EEA = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = J5EPCRFAR9;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 117EA6341F25DBD200FF6EEA;
+					};
+				};
+			};
+			buildConfigurationList = 117EA6301F25DBD200FF6EEA /* Build configuration list for PBXProject "DONG-Html5-Css-JavaScript" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 117EA62C1F25DBD200FF6EEA;
+			productRefGroup = 117EA6361F25DBD200FF6EEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				117EA6341F25DBD200FF6EEA /* DONG-Html5-Css-JavaScript */,
+				117EA64D1F25DBD200FF6EEA /* DONG-Html5-Css-JavaScriptTests */,
+				117EA6581F25DBD200FF6EEA /* DONG-Html5-Css-JavaScriptUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		117EA6331F25DBD200FF6EEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				117EA6481F25DBD200FF6EEA /* LaunchScreen.storyboard in Resources */,
+				117EA6451F25DBD200FF6EEA /* Assets.xcassets in Resources */,
+				117EA6431F25DBD200FF6EEA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117EA64C1F25DBD200FF6EEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117EA6571F25DBD200FF6EEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		117EA6311F25DBD200FF6EEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				117EA6401F25DBD200FF6EEA /* ViewController.m in Sources */,
+				117EA63D1F25DBD200FF6EEA /* AppDelegate.m in Sources */,
+				117EA63A1F25DBD200FF6EEA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117EA64A1F25DBD200FF6EEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				117EA6531F25DBD200FF6EEA /* DONG_Html5_Css_JavaScriptTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117EA6551F25DBD200FF6EEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				117EA65E1F25DBD200FF6EEA /* DONG_Html5_Css_JavaScriptUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		117EA6501F25DBD200FF6EEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 117EA6341F25DBD200FF6EEA /* DONG-Html5-Css-JavaScript */;
+			targetProxy = 117EA64F1F25DBD200FF6EEA /* PBXContainerItemProxy */;
+		};
+		117EA65B1F25DBD200FF6EEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 117EA6341F25DBD200FF6EEA /* DONG-Html5-Css-JavaScript */;
+			targetProxy = 117EA65A1F25DBD200FF6EEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		117EA6411F25DBD200FF6EEA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				117EA6421F25DBD200FF6EEA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		117EA6461F25DBD200FF6EEA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				117EA6471F25DBD200FF6EEA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		117EA6601F25DBD200FF6EEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		117EA6611F25DBD200FF6EEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		117EA6631F25DBD200FF6EEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J5EPCRFAR9;
+				INFOPLIST_FILE = "DONG-Html5-Css-JavaScript/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "P.R.China.DONG-Html5-Css-JavaScript";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		117EA6641F25DBD200FF6EEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J5EPCRFAR9;
+				INFOPLIST_FILE = "DONG-Html5-Css-JavaScript/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "P.R.China.DONG-Html5-Css-JavaScript";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		117EA6661F25DBD200FF6EEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = J5EPCRFAR9;
+				INFOPLIST_FILE = "DONG-Html5-Css-JavaScriptTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "P.R.China.DONG-Html5-Css-JavaScriptTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DONG-Html5-Css-JavaScript.app/DONG-Html5-Css-JavaScript";
+			};
+			name = Debug;
+		};
+		117EA6671F25DBD200FF6EEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = J5EPCRFAR9;
+				INFOPLIST_FILE = "DONG-Html5-Css-JavaScriptTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "P.R.China.DONG-Html5-Css-JavaScriptTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DONG-Html5-Css-JavaScript.app/DONG-Html5-Css-JavaScript";
+			};
+			name = Release;
+		};
+		117EA6691F25DBD200FF6EEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = J5EPCRFAR9;
+				INFOPLIST_FILE = "DONG-Html5-Css-JavaScriptUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "P.R.China.DONG-Html5-Css-JavaScriptUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "DONG-Html5-Css-JavaScript";
+			};
+			name = Debug;
+		};
+		117EA66A1F25DBD200FF6EEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = J5EPCRFAR9;
+				INFOPLIST_FILE = "DONG-Html5-Css-JavaScriptUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "P.R.China.DONG-Html5-Css-JavaScriptUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "DONG-Html5-Css-JavaScript";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		117EA6301F25DBD200FF6EEA /* Build configuration list for PBXProject "DONG-Html5-Css-JavaScript" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117EA6601F25DBD200FF6EEA /* Debug */,
+				117EA6611F25DBD200FF6EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		117EA6621F25DBD200FF6EEA /* Build configuration list for PBXNativeTarget "DONG-Html5-Css-JavaScript" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117EA6631F25DBD200FF6EEA /* Debug */,
+				117EA6641F25DBD200FF6EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		117EA6651F25DBD200FF6EEA /* Build configuration list for PBXNativeTarget "DONG-Html5-Css-JavaScriptTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117EA6661F25DBD200FF6EEA /* Debug */,
+				117EA6671F25DBD200FF6EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		117EA6681F25DBD200FF6EEA /* Build configuration list for PBXNativeTarget "DONG-Html5-Css-JavaScriptUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117EA6691F25DBD200FF6EEA /* Debug */,
+				117EA66A1F25DBD200FF6EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 117EA62D1F25DBD200FF6EEA /* Project object */;
+}
