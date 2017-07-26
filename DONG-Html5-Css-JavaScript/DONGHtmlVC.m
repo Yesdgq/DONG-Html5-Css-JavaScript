@@ -175,7 +175,8 @@
 
 #pragma mark - webView delegate
 
-- (void)webViewDidStartLoad:(UIWebView *)webView{
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
     NSLog(@"webViewDidStartLoad");
     self.progressView.hidden = NO;
     self.loadCount ++;
@@ -199,7 +200,7 @@
     // [Dialog dismissSVHUD];
 }
 
--(void)webView:(UIWebView*)webView  DidFailLoadWithError:(NSError*)error
+-(void)webView:(UIWebView*)webView DidFailLoadWithError:(NSError*)error
 {
     self.loadCount --;
     self.progressView.hidden = YES;

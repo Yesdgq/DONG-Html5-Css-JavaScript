@@ -15,15 +15,48 @@
         
         <h3>我是HTML</h3>
         
-        <p id = "p">p标签</p>
+        <p id = "p">
+            p标签
+        </p>
         
-        <img id = "img" src = "image.png" alt = "百度LOGO"><br/>
+        <img id = "img" src = "https://www.baidu.com/img/baidu_jgylogo3.gif" alt = "百度LOGO"><br/>
             
-            <a id = "a" href="[https://www.baidu.com]()">我要到百度</a>
+            <a id = "a" href= "[https://www.baidu.com]()">
+                打开百度
+            </a>
             
             <br/><br/><br/>
             
-            <button onclick = "hello()">点击我弹出hello</button>
-            </body>
+            <button onclick = "hello()">
+                点击我弹出hello
+            </button>
+            
+            <br/><br/><br/>
+            
+            <!-- HTML结构 -->
+            <form id="test-register" action="#" target="_blank" enctype="multipart/form-data" method="post"onsubmit="return checkRegisterForm()">
+                <p id="test-error" style="color:red">
+                </p>
+                <p>
+                    用户名: <input type="text" id="username" name="username">
+                </p>
+                <p>
+                    口令: <input type="password" id="password" name="password">
+                </p>
+                <p>
+                    重复口令: <input type="password" id="password-2">
+                </p>
+                <p>
+                    <button type="submit">提交</button> <button type="reset">重置</button>
+                </p>
+                <p>
+                   <input type="file" name="选择文件">
+                </p>
+                
+            </form>
+            
+    </body>
+    
+    
     
 </html>
