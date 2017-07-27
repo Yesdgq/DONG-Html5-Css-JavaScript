@@ -1,6 +1,6 @@
 
 function hello(string){
-    alert("你好"+string);
+    alert("你好+"+string);
 }
 
 
@@ -49,7 +49,6 @@ var checkRegisterForm = function () {
     return true;
 }
 
-
 // 演示了如何通过HTML5的File API读取文件内容。以DataURL的形式读取到的文件是一个字符串，类似于data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...，常用于设置图像。如果需要服务器端处理，把字符串base64,后面的字符发送给服务器并用Base64解码就可以得到原始文件的二进制内容
 
 var
@@ -90,6 +89,14 @@ fileInput.addEventListener('change', function () {
 // 上面的代码还演示了JavaScript的一个重要的特性就是单线程执行模式。在JavaScript中，浏览器的JavaScript执行引擎在执行JavaScript代码时，总是以单线程模式执行，也就是说，任何时候，JavaScript代码都不可能同时有多于1个线程在执行。
 
 
+
+function secondClick() {
+    share('分享的标题','分享的内容','图片地址');
+}
+
+function showAlert(message) {
+    alert(message);
+}
 
 
 

@@ -32,7 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.automaticallyAdjustsScrollViewInsets = NO;
+//    self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor colorWithHex:@"dddddd"];
     
     [self setNavigationBarItem];
@@ -42,7 +42,6 @@
         [self webViewLoadUrlData];
     }
     
-    //  [self addGoBackButton];
     
 }
 
@@ -105,6 +104,20 @@
     
     self.navigationItem.leftBarButtonItems = _twoItemsArray;
     
+    // 右侧item
+    // 关闭按钮
+    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBtn.frame = CGRectMake(0, 0, 80, 22);
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
+    [rightBtn addTarget:self action:@selector(ocNativeCallJs) forControlEvents:UIControlEventTouchUpInside];
+    [rightBtn setTitle:@"OC调用JS" forState:UIControlStateNormal];
+    rightBtn.titleLabel.font = [UIFont systemFontOfSize:17];
+    [rightBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    self.navigationItem.rightBarButtonItems = @[leftNegativeSpacer, rightItem];
+
+    
+    
 }
 
 // webView如果有多层页面，点击返回回到上一页面。返回到首页再点击关闭当前控制器
@@ -143,7 +156,7 @@
     NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"index1"
                                                           ofType:@"html"];
     
-    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, kMainScreenWidth, kMainScreenHeight -20)];
+    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight)];
     self.webView.delegate = self;
     [self.view addSubview:self.webView];
     
@@ -221,6 +234,9 @@
     self.progressView.hidden = YES;
     NSLog(@"webViewDidFinishLoad");
     // [Dialog dismissSVHUD];
+    // JS调用OC方法
+    [self jsCallOcNative];
+
 }
 
 -(void)webView:(UIWebView*)webView DidFailLoadWithError:(NSError*)error
@@ -265,45 +281,53 @@
 //
 //}
 
-#pragma mark - js 调用 oc方法
+- (void)share
+{
+    NSLog(@"share被调用了");
+}
 
-- (void)goToLogin
+#pragma mark - JS调用OC方法
+
+- (void)jsCallOcNative
 {
     JSContext *context = [_webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     
-    context[@"goToLogin"] = ^() {// 这使用block的方式来实现的
-        //        NSArray *argsContent = [JSContext currentArguments];// 获取JS给OC传的值
-        //
-        //        //<处理数据方法1.得到指定的某个数据>判断是否有数据(有数据的处理)
-        //        if (argsContent.count) {
-        //            id dataValue = [[NSString stringWithFormat:@"%@",argsContent[0]] mj_JSONObject];
-        //            NSLog(@"%@",dataValue);
-        //        }
-        //
-        //        NSArray *args = [JSContext currentArguments];//获取JS给OC传的值
-        //        NSDictionary *dic;
-        //        //<处理数据方法2>返回的json数据解析处理
-        //        for (JSValue *jsVal in args) {
-        //            dic = [jsVal toDictionary];
-        //            NSLog(@"%@",dic);
-        //            NSString *str = [NSString stringWithFormat:@"%@",jsVal];
-        //            id dataValue = [str mj_JSONObject];
-        //            NSLog(@"%@", dataValue);
-        //        }
-        //
-        //        JSValue *this = [JSContext currentThis];
-        //        NSLog(@"%@",this.context.description);
-        //        NSLog(@"-------End Log-------");
-        //        return dic;//这很重要。这是给JS调用此方法后的返回值<自己控制返回什么>
+    // 定义好JS要调用的方法, share就是调用的share方法名
+    context[@"share"] = ^() {
+        NSLog(@"+++++++Begin Log+++++++");
+        NSArray *args = [JSContext currentArguments];
         
-        //打开以下注释
-        /*
-         CPLoginViewController *login = TL_INSTANT_VC_WITH_ID(@"Main", @"CPLoginViewController");
-         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:login];
-         [self presentViewController:nav animated:YES completion:nil];
-         */
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"JS调用OC方法" message:@"这是OC原生的弹出窗" delegate:self cancelButtonTitle:@"收到" otherButtonTitles:nil];
+            [alertView show];
+        });
+        
+        for (JSValue *jsVal in args) {
+            NSLog(@"%@", jsVal.toString);
+        }
+        
+        NSLog(@"-------End Log-------");
     };
 }
 
+
+#pragma mark - OC调用JS方法
+
+// 方式一
+- (void)ocNativeCallJs
+{
+    NSString *jsStr = [NSString stringWithFormat:@"showAlert('%@')",@"这里是JS中alert弹出的message"];
+    [_webView stringByEvaluatingJavaScriptFromString:jsStr];
+    
+}
+
+// 方式二  使用JavaScriptCore库来做JS交互
+
+- (void)ocNativeCallJs2
+{
+    JSContext *context = [self.webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+    NSString *textJS = @"showAlert('这里是JS中alert弹出的message')";
+    [context evaluateScript:textJS];
+}
 
 @end
