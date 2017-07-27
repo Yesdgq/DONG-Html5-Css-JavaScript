@@ -1,6 +1,6 @@
 
-function hello(){
-    alert("你好");
+function hello(string){
+    alert("你好"+string);
 }
 
 
