@@ -38,12 +38,17 @@
     [self setNavigationBarItem];
     
     
-    
     if (_urlString) {
         [self webViewLoadUrlData];
     }
-    [self addGoBackButton];
     
+    //  [self addGoBackButton];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
 }
 
@@ -52,7 +57,8 @@
     
 }
 
-- (void)addGoBackButton {
+- (void)addGoBackButton
+{
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(50, 29, 50, 30);
     [btn setTitle:@"关闭" forState:UIControlStateNormal];
@@ -73,13 +79,14 @@
 
 - (void)setNavigationBarItem
 {
+    // 返回按钮
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(0, 0, 22, 22);
     UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:btn];
     [btn addTarget:self action:@selector(clickBackBBI:) forControlEvents:UIControlEventTouchUpInside];
     [btn setBackgroundImage:[UIImage imageNamed:@"Back_Arrow"] forState:UIControlStateNormal];
     
-    
+    // 关闭按钮
     _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _closeButton.frame = CGRectMake(0, 0, 35, 22);
     UIBarButtonItem *closeItem = [[UIBarButtonItem alloc]initWithCustomView:_closeButton];
@@ -93,15 +100,16 @@
                                            target:nil action:nil];
     leftNegativeSpacer.width = -6;
     
-    _threeItemsArray = [NSArray arrayWithObjects:leftNegativeSpacer,item,closeItem, nil];
-    _twoItemsArray = [NSArray arrayWithObjects:leftNegativeSpacer,item, nil];
+    _threeItemsArray = [NSArray arrayWithObjects:leftNegativeSpacer,item,closeItem, nil]; // 有关闭
+    _twoItemsArray = [NSArray arrayWithObjects:leftNegativeSpacer,item, nil]; // 没有关闭
     
     self.navigationItem.leftBarButtonItems = _twoItemsArray;
     
 }
 
-//webView如果有多层页面，点击返回回到上一页面。返回到首页再点击关闭当前控制器
-- (void)clickBackBBI:(UIButton *)sender {
+// webView如果有多层页面，点击返回回到上一页面。返回到首页再点击关闭当前控制器
+- (void)clickBackBBI:(UIButton *)sender
+{
     if (self.notificationPresentH5) {
         if (_webView.canGoBack) {
             [_webView goBack];
@@ -118,8 +126,9 @@
     return;
 }
 
-//关闭当前控制器
-- (void)closeController:(UIButton *)sender {
+// 关闭当前控制器
+- (void)closeController:(UIButton *)sender
+{
     if (self.notificationPresentH5) {
         [self dismissViewControllerAnimated:YES completion:NULL];
     } else {
@@ -130,38 +139,36 @@
 /** 加载webView */
 - (void)webViewLoadUrlData
 {
+    // 读取本地xml
     NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"index1"
                                                           ofType:@"html"];
-    
-    
-    
     
     self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, kMainScreenWidth, kMainScreenHeight -20)];
     self.webView.delegate = self;
     [self.view addSubview:self.webView];
     
-    //-1.进度条
+    // 进度条
     UIProgressView *progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 0)];
     [_webView addSubview:progressView];
     progressView.tintColor = WebViewNav_TintColor;
     progressView.trackTintColor = [UIColor whiteColor];
     self.progressView = progressView;
     
-    //    NSURL *url = [NSURL URLWithString:_urlString]; // 加载http
-    NSURL *url = [NSURL URLWithString:htmlPath]; // 加载本地html
+//    NSURL *url = [NSURL URLWithString:_urlString]; // 加载http
+        NSURL *url = [NSURL URLWithString:htmlPath]; // 加载本地html
     
     [_webView loadRequest:[NSURLRequest requestWithURL:url]];
-    
     
 }
 
 // 计算webView进度条
-- (void)setLoadCount:(NSUInteger)loadCount {
+- (void)setLoadCount:(NSUInteger)loadCount
+{
     _loadCount = loadCount;
     if (loadCount == 0) {
         self.progressView.hidden = YES;
         [self.progressView setProgress:0 animated:NO];
-    }else {
+    } else {
         self.progressView.hidden = NO;
         CGFloat oldP = self.progressView.progress;
         CGFloat newP = (1.0 - oldP) / (loadCount + 1) + oldP;
@@ -174,6 +181,22 @@
 
 
 #pragma mark - webView delegate
+
+
+- (BOOL)webView:(UIWebView*)webView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    NSURL* url = [request URL];
+    NSString* urlstring = [NSString stringWithFormat:@"%@",url];
+    NSLog(@"url = %@",urlstring);
+    
+    if (_webView.canGoBack) {
+        self.navigationItem.leftBarButtonItems = _threeItemsArray;
+    } else {
+        self.navigationItem.leftBarButtonItems = _twoItemsArray;
+    }
+    
+    return TRUE;
+}
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
@@ -210,28 +233,9 @@
     
     self.title = @"呀！页面走丢啦~";
     // 本地加载html
-    NSString *htmlPath=[[NSBundle mainBundle] pathForResource:@"erro" ofType:@"html"];
-    NSURL *localURL=[[NSURL alloc]initFileURLWithPath:htmlPath];
+    NSString *htmlPath = [[NSBundle mainBundle] pathForResource:@"erro" ofType:@"html"];
+    NSURL *localURL = [[NSURL alloc]initFileURLWithPath:htmlPath];
     [_webView loadRequest:[NSURLRequest requestWithURL:localURL]];
-}
-
-
-- (BOOL)webView:(UIWebView*)webView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType
-{
-    NSURL* url = [request URL];
-    NSString* urlstring = [NSString stringWithFormat:@"%@",url];
-    NSLog(@"url = %@",urlstring);
-    
-    
-    if (_webView.canGoBack) {
-        self.navigationItem.leftBarButtonItems = _threeItemsArray;
-    } else {
-        self.navigationItem.leftBarButtonItems = _twoItemsArray;
-    }
-    
-    
-    
-    return TRUE;
 }
 
 
@@ -262,12 +266,13 @@
 //}
 
 #pragma mark - js 调用 oc方法
-- (void)goToLogin {
-    
+
+- (void)goToLogin
+{
     JSContext *context = [_webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     
-    context[@"goToLogin"] = ^() {//这使用block的方式来实现的
-        //        NSArray *argsContent = [JSContext currentArguments];//获取JS给OC传的值
+    context[@"goToLogin"] = ^() {// 这使用block的方式来实现的
+        //        NSArray *argsContent = [JSContext currentArguments];// 获取JS给OC传的值
         //
         //        //<处理数据方法1.得到指定的某个数据>判断是否有数据(有数据的处理)
         //        if (argsContent.count) {
@@ -299,8 +304,6 @@
          */
     };
 }
-
-
 
 
 @end
