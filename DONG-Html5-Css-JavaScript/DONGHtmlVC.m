@@ -161,7 +161,7 @@
     [self.view addSubview:self.webView];
     
     // 进度条
-    UIProgressView *progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 0)];
+    UIProgressView *progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 64, kMainScreenWidth, 0)];
     [_webView addSubview:progressView];
     progressView.tintColor = WebViewNav_TintColor;
     progressView.trackTintColor = [UIColor whiteColor];
